@@ -1,0 +1,167 @@
+body {
+    margin: 0;  /* ヘッダーの上の隙間をなくした */
+    padding: 0;
+    background-color: #fafafa;
+}
+
+@media screen and (max-width: 767px) {
+.header-nav-container {
+    max-width: 100%;
+    margin: 0 16px;
+ }
+}
+
+header {
+    display: flex;  /* 横並び */
+    align-items: center;  /* 画像と文字を中央揃え */
+    justify-content: space-between;  /* 右と左に分ける　*/
+    height: 70px;  /* ヘッダーの高さを70pxに。 */
+    position: relative;
+    background-color: white;
+     z-index: 2;
+}
+
+.header-logo-image {
+    position: relative;
+    height: 20px;  /* ロゴの高さ　*/
+    width: auto;
+    margin-left: 36px;  /* 左の余白 */
+    z-index: 3;
+}
+
+@media screen and (max-width: 1080px){
+.header-nav-hamburger {
+cursor: pointer;
+display: block;
+position: relative;
+width: 24px;
+height: 17px;
+margin: auto;
+z-index: 100;
+ }   
+}
+
+ul {
+    display: flex;   /* liを横並び */
+    list-style: none;   
+    margin-right: 36px;   /* 右の余白　　*/
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav-list-link {  /* 下線はliではなく、a （リンク）につく。 */
+    text-decoration: none;  /* 下線を消す */
+    color: black;   /* 文字色を黒に */
+    text-align: center;
+    font-family: "Lato", sans-serif; /* フォント指定 */
+    font-size: 12px;   
+    line-height: 14.4px;
+    font-weight: 600;     /* 文字の太さ */
+    display: inline-block;
+    margin-right: 45px;  /*　要素の右の余白 */
+}
+
+li span {
+    display: block;
+}
+
+li span:nth-of-type(2) {
+    font-size: 10px;
+    font-family: "ku Gothic Pro", "メイリオ", Meiryo,游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Ka "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+.header-nav-list-button {
+    background-color: #f79214;
+    display: flex;
+    padding: 0 20px;
+    border-radius: 38px;  /* ボタンに丸みをつける。 */
+    color: white;
+    height: 40px;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-page {
+    position: relative;
+    height: 739px;
+    background-color: #fafafa;
+}
+
+.top-page-triangle1 {   /* 左上の三角形 */  /* 画面上の特定の位置 */
+    position: absolute;
+     top: -70px;
+    left: 0;
+    z-index: 1;
+}
+
+.top-page-triangle2 {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+}
+  
+.top-page-people {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 775px;
+}
+
+.top-page-circle {
+    position: absolute;
+    top: 115px;
+    left: 50%;
+    transform: translateX(-45%);     /* 要素の幅の45％分　左　*/
+}
+
+.top-page-content{
+    position: absolute;
+    top: 255px;
+    left: 335px;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+h2 {
+    font-family: "Lato", sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 63px;
+    margin-bottom: 16px;
+
+}
+
+.ei {
+    font-size: 39px;
+}
+
+.top-page-line {
+    position: relative;
+    top: 85px;
+    left: -70px;
+}
+
+.top-page-button {
+    display: flex;
+    background-color: #f79214;
+    color: #fafafa;
+    text-align: center;
+    text-decoration: none;
+    height: 64px;
+    border-radius: 38px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.top-page-explanation {
+    font-size: 12px;
+    line-height: 16px;
+    font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+    color: #333;
+}

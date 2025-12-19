@@ -112,16 +112,17 @@ li span:nth-of-type(2) {
 }
 
 .top-page-circle {
-    position: absolute;
-    top: 115px;
-    left: 50%;
-    transform: translateX(-45%);     /* 要素の幅の45％分　左　*/
+    position: relative;
+    top: -210px;
+    left: 230px;
+
 }
 
 .top-page-content{
-    position: absolute;
-    top: 255px;
-    left: 335px;
+    position: relative;
+    margin-top: -550px;
+    margin-left: 320px;
+    flex-direction: column;
     font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
@@ -131,7 +132,7 @@ h2 {
     font-weight: 800;
     line-height: 63px;
     margin-bottom: 16px;
-
+    margin-right: 20px;
 }
 
 .ei {
@@ -154,9 +155,8 @@ h2 {
     border-radius: 38px;
     justify-content: center;
     align-items: center;
+    width: 35%;
     font-weight: 700;
-    width: 100%;
-    margin-bottom: 16px;
 }
 
 .top-page-explanation {

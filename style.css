@@ -70,6 +70,19 @@ li span:nth-of-type(2) {
     font-family: "ku Gothic Pro", "メイリオ", Meiryo,游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Ka "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
+/* --- 1. ヘッダーのリスト（li） --- */
+.header-nav-list-item {
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: #333; /* 通常時の文字色（濃いグレー） */
+    text-decoration: none;
+}
+
+.header-nav-list-item :hover {
+    color: #888; /* ホバー時に明るいグレーへ変化 */
+    transform: translateY(-2px); /* 少しだけ浮かせる */
+}
+
 .header-nav-list-button {
     background-color: #f79214;
     display: flex;
@@ -83,6 +96,14 @@ li span:nth-of-type(2) {
     text-decoration: none;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 0 #d67b0a;
+}
+
+.header-nav-list-button :hover {
+    background-color: #ffaa3e; /* オレンジを少し明るく */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(247, 146, 20, 0.3);
 }
 
 .top-page {
@@ -157,6 +178,16 @@ h2 {
     align-items: center;
     width: 35%;
     font-weight: 700;
+    transition: all 0.3s ease; /* 変化をふわっとさせる（0.3秒） */
+    box-shadow: 0 4px 0 #d67b0a; /* 下に影をつけて立体感を出す（任意） */
+}
+
+/* ホバー時の動き */
+.top-page-button:hover {
+    background-color: #ffaa3e; /* 背景色を少し明るく */
+    transform: translateY(-3px); /* 3px上に浮かせる */
+    box-shadow: 0 7px 15px rgba(247, 146, 20, 0.3); /* 影を広げて浮遊感を出す */
+    opacity: 0.9; /* 少し透明度を上げる（お好みで） */
 }
 
 .top-page-explanation {
@@ -165,3 +196,144 @@ h2 {
     font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
     color: #333;
 }
+
+
+ 
+@media screen and (max-width: 1080px) {
+  header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+        height: 60px;
+        background-color: #fff;
+        position: relative;
+        z-index: 10;
+    }
+
+    .header-logo-image {
+        margin-left: 0;
+        height: 18px;
+    }
+
+    .header-nav-all {
+        display: none !important;
+    }
+
+    .header-nav-hamburger {
+        display: block !important;
+        width: 24px;
+        height: 18px;
+        position: relative;
+    }
+
+    .hamburger-line {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+    }
+    .hamburger-line:nth-of-type(1) { top: 0; }
+    .hamburger-line:nth-of-type(2) { top: 8px; }
+    .hamburger-line:nth-of-type(3) { top: 16px; }
+
+   
+    .top-page {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        overflow: visible; 
+    }
+
+    .top-page-people {
+        position: relative;
+        top: -5px;       
+        left: 40px;      
+        width: 75%;      
+        max-width: 340px;
+        margin: 0 auto;
+        height: auto;
+        z-index: 4; 
+    }
+
+   
+    .top-page-line {
+        display: block !important;
+        position: absolute;
+        top: 35px;
+        left: 5px;
+        width: 200px;
+        z-index: 3; 
+        opacity: 0.8;
+    }
+
+    
+    .top-page-content {
+        position: relative;
+        margin: 10px 16px 0; 
+        z-index: 5;
+    }
+
+    h2 {
+        font-size: 22px;
+        line-height: 1.4;
+        margin: 0;
+        text-align: left;
+    }
+
+   
+    .top-page-circle {
+        position: absolute !important;
+        top: 100% !important; 
+        margin-top: -25px !important; 
+        right: 40px !important; 
+        left: auto !important;
+        width: 100px;
+        height: auto;
+        z-index: 6;
+    }
+
+   
+    .top-page-button {
+        display: flex;
+        width: 100%;
+        height: 56px;
+        margin: 30px 0 15px; 
+        font-size: 16px;
+        background-color: #f79214;
+        color: white;
+        border-radius: 38px;
+        text-decoration: none;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        position: relative;
+        z-index: 5;
+    }
+
+    .top-page-explanation {
+        display: block;
+        width: 100%;
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+   
+    .top-page-triangle1 {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        z-index: 1;
+    }
+
+    .top-page-triangle2 {
+        display: none;
+    }
+}
+
+  
+   
